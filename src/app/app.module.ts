@@ -3,18 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { BookingComponent } from './booking/booking.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faCalendar as fasCalendar } from '@fortawesome/free-regular-svg-icons';
+import { faHome as faHome, faBell as faBell, faUser as faUser } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    DashboardComponent,
+    BookingComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    library.addIcons(faHome, fasCalendar, faBell, faUser);
+  } 
+}
