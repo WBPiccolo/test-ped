@@ -3,6 +3,16 @@
     <div class="dashboard-green-diagonal-div"></div>
 </div>
 <p style='margin:50px'></p>
+
+<ng-container class="prossime-attività" *ngFor="let act of nextLessons">
+    <activity-container [lesson]=act></activity-container>
+</ng-container>
+
+<ng-container class="pending-attività" *ngFor="let act of pendingLessons">
+    <activity-container [lesson]=act></activity-container>
+</ng-container>
+
+<p style='margin:50px'></p>
 <div class="dashboard-allenati-con-noi">
     <div class="dashboard-blue-diagonal-div">
         <div class="allenati-con-noi-content">
@@ -10,7 +20,7 @@
             Allenati con noi all'Arco della Pace <br/>
             Tutte le domeniche
         </p>
-        <button type="button" class="btn btn-primary">Scopri di più</button>
+        <button type="button" class="btn btn-primary">SCOPRI DI PIÙ</button>
         </div>
     </div>
 </div>

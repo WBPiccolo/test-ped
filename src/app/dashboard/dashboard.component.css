@@ -35,5 +35,7 @@
     margin-top: 10px;
 }
 .allenati-con-noi-content > p{
-    color: white
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
 }
