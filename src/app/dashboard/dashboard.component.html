@@ -1,28 +1,32 @@
-<div class="dashboard-activity-container">
-    <div class="dashboard-blue-diagonal-div"></div>
-    <div class="dashboard-green-diagonal-div"></div>
-</div>
-<p style='margin:50px'></p>
+<div class="dashboard-activity">
+  <div class="dashboard-blue-diagonal-div"></div>
+  <div class="dashboard-green-diagonal-div"></div>
 
-<div class="attivita-container">
-    <ng-container class="prossime-attivita" *ngFor="let act of nextLessons">
-        <activity-container [lesson]=act></activity-container>
-    </ng-container>
-
-    <ng-container class="pending-attivita" *ngFor="let act of pendingLessons">
-        <activity-container [lesson]=act></activity-container>
-    </ng-container>
-</div>
-
-<p style='margin:50px'></p>
-<div class="dashboard-allenati-con-noi">
-    <div class="dashboard-blue-diagonal-div">
-        <div class="allenati-con-noi-content">
-        <p>
-            Allenati con noi all'Arco della Pace <br/>
-            Tutte le domeniche
-        </p>
-        <button type="button" class="btn btn-primary">SCOPRI DI PIÙ</button>
-        </div>
+  <div class="attivita-container">
+    <div class="prossime-attivita">
+      <ng-container *ngFor="let act of nextLessons">
+        <activity-container [lesson]="act"></activity-container>
+      </ng-container>
     </div>
+
+    <div class="pending-attivita">
+      <ng-container *ngFor="let act of pendingLessons">
+        <activity-container [lesson]="act"></activity-container>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<div class="padding-div"></div>
+
+<div class="dashboard-allenati-con-noi">
+  <div class="dashboard-blue-diagonal-div">
+    <div class="allenati-con-noi-content">
+      <p>
+        Allenati con noi all'Arco della Pace <br />
+        Tutte le domeniche
+      </p>
+      <button type="button" class="btn btn-primary">SCOPRI DI PIÙ</button>
+    </div>
+  </div>
 </div>
