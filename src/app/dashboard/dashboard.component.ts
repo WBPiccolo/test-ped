@@ -10,9 +10,9 @@ import { ActivityContainerComponent } from '../activity-container/activity-conta
 export class DashboardComponent implements OnInit {
 
   lezioni: Lesson[] = [
-    {name: 'Postural Training', time: new Date(), length: 30, clubName: 'Ravizza', salaName: 'Conscious', status:'N', peopleInQueue: 0, img: ''},
-    {name: 'Postural Training', time: new Date(), length: 30, clubName: 'Ravizza', salaName: 'Conscious', status:'N', peopleInQueue: 0, img: ''},
-    {name: 'Postural Training', time: new Date(), length: 30, clubName: 'Ravizza', salaName: 'Conscious', status:'P', peopleInQueue: 2, img: ''},
+    {name: 'Postural Training', time: new Date(), length: 30, clubName: 'Ravizza', salaName: 'Conscious', status:'N', peopleInQueue: 0, img: '../../assets/postural-training.png'},
+    {name: 'Postural Training', time: new Date(), length: 30, clubName: 'Ravizza', salaName: 'Conscious', status:'N', peopleInQueue: 0, img: '../../assets/postural-training.png'},
+    {name: 'Postural Training', time: new Date(), length: 30, clubName: 'Ravizza', salaName: 'Conscious', status:'P', peopleInQueue: 2, img: '../../assets/postural-training.png'},
   ];
 
   nextLessons: Lesson[] = [];

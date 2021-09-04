@@ -1,0 +1,27 @@
+.activity-container {
+  width: 35rem;
+  height: 19vh;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+}
+
+.activity-image {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.activity-image > img {
+  max-width: 100%;
+}
+
+.activity-text {
+  width: 65%;
+  float: right;
+}
+
+.activity-name {
+  font-weight: 700;
+  color: #013066;
+  font-family: "Poppins", sans-serif;
+}

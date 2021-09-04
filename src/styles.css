@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
 .btn-primary {
-    background-color: #d4df5d;
-    border-radius: 0px;
-    color: #013066;
-    border: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
+  background-color: #d4df5d;
+  border-radius: 0px;
+  color: #013066;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
 }

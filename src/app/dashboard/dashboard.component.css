@@ -37,5 +37,13 @@
 .allenati-con-noi-content > p{
     color: white;
     font-family: 'Roboto', sans-serif;
+}
 
+.prossime-attivita{
+    float:left
+}
+
+.pending-attivita{
+    float:right;
+    background-color: blue;
 }

@@ -8,8 +8,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookingComponent } from './booking/booking.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faCalendar as fasCalendar } from '@fortawesome/free-regular-svg-icons';
-import { faHome as faHome, faBell as faBell, faUser as faUser } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCalendar as fasCalendar,
+  faClock as faClock,
+} from '@fortawesome/free-regular-svg-icons';
+import {
+  faHome as faHome,
+  faBell as faBell,
+  faUser as faUser,
+  faChevronRight as faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 import { ActivityContainerComponent } from './activity-container/activity-container.component';
 
 @NgModule({
@@ -19,17 +27,19 @@ import { ActivityContainerComponent } from './activity-container/activity-contai
     BookingComponent,
     ActivityContainerComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    FontAwesomeModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(library: FaIconLibrary) {
-    library.addIcons(faHome, fasCalendar, faBell, faUser);
-  } 
+    library.addIcons(
+      faHome,
+      fasCalendar,
+      faBell,
+      faUser,
+      faClock,
+      faChevronRight
+    );
+  }
 }

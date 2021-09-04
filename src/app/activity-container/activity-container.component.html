@@ -1,1 +1,51 @@
-<p>activity-container works!</p>
+<div class="activity-container">
+  <div class="activity-image">
+    <img src="{{ lesson.img }}" />
+  </div>
+  <div class="activity-text">
+    <div class="activity-name p-1">
+      {{ lesson.name }}
+      <fa-icon
+        class="float-right px-2"
+        [icon]="['fas', 'chevron-right']"
+      ></fa-icon>
+    </div>
+    <div class="activity-date">
+      {{ getFormattedDate(lesson.time) }}
+    </div>
+    <div class="activity-hour">
+      <span class="activity-from">
+        {{ getStartTime(lesson.time) }}
+      </span>
+      <span class="activity-to">
+        {{ getEndTime(lesson.time, lesson.length) }}
+      </span>
+      <span class="activity-length">
+        <fa-icon [icon]="['far', 'clock']"></fa-icon>
+        {{ lesson.length }} min
+      </span>
+    </div>
+    <ng-container *ngIf="lesson.status === 'N'; else lezionePendingBlock">
+      <div class="activity-place">
+        <div class="activity-club">
+          <span class="club-label"> Club </span>
+          <span class="club-name">
+            {{ lesson.clubName }}
+          </span>
+        </div>
+        <div class="activity-place">
+          <span class="place-label"> Sala </span>
+          <span class="place-name">
+            {{ lesson.salaName }}
+          </span>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #lezionePendingBlock>
+      <span class="people-in-front-of-you">
+        {{ lesson.peopleInQueue }} persone prima di te
+      </span>
+      <button type="button" class="btn btn-outline-warning">Annulla</button>
+    </ng-template>
+  </div>
+</div>
