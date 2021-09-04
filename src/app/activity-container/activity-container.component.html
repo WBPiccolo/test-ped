@@ -1,8 +1,8 @@
-<div class="activity-container">
+<div class="activity-container card flex-row flex-wrap">
   <div class="activity-image">
     <img src="{{ lesson.img }}" />
   </div>
-  <div class="activity-text">
+  <div class="activity-text px-4 container">
     <div class="activity-name p-1">
       {{ lesson.name }}
       <fa-icon
@@ -10,42 +10,47 @@
         [icon]="['fas', 'chevron-right']"
       ></fa-icon>
     </div>
-    <div class="activity-date">
+    <div class="activity-date pt-2">
       {{ getFormattedDate(lesson.time) }}
     </div>
     <div class="activity-hour">
       <span class="activity-from">
         {{ getStartTime(lesson.time) }}
       </span>
-      <span class="activity-to">
+      <span class="activity-to px-2">
         {{ getEndTime(lesson.time, lesson.length) }}
       </span>
-      <span class="activity-length">
+      <span class="activity-length float-right mx-4">
         <fa-icon [icon]="['far', 'clock']"></fa-icon>
         {{ lesson.length }} min
       </span>
     </div>
     <ng-container *ngIf="lesson.status === 'N'; else lezionePendingBlock">
-      <div class="activity-place">
-        <div class="activity-club">
-          <span class="club-label"> Club </span>
-          <span class="club-name">
-            {{ lesson.clubName }}
-          </span>
-        </div>
-        <div class="activity-place">
-          <span class="place-label"> Sala </span>
-          <span class="place-name">
-            {{ lesson.salaName }}
-          </span>
-        </div>
+      <div class="activity-label row mt-1">
+        <span class="club-label col"> Club </span>
+        <span class="place-label col"> Sala </span>
+      </div>
+      <div class="activity-place row">
+        <span class="club-name col">
+          {{ lesson.clubName }}
+        </span>
+        <span class="place-name col">
+          {{ lesson.salaName }}
+        </span>
       </div>
     </ng-container>
     <ng-template #lezionePendingBlock>
-      <span class="people-in-front-of-you">
-        {{ lesson.peopleInQueue }} persone prima di te
-      </span>
-      <button type="button" class="btn btn-outline-warning">Annulla</button>
+      <div class="row mt-1">
+        <span class="people-in-front-of-you mt-2 col">
+          {{ lesson.peopleInQueue }} persone prima di te
+        </span>
+        <button
+          type="button"
+          class="btn btn-outline-warning col annulla-button"
+        >
+          ANNULLA
+        </button>
+      </div>
     </ng-template>
   </div>
 </div>

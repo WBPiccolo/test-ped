@@ -1,6 +1,6 @@
 .activity-container {
-  width: 35rem;
-  height: 19vh;
+  width: 550px;
+  height: 160px;
   margin-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
 }
@@ -12,16 +12,56 @@
 }
 
 .activity-image > img {
-  max-width: 100%;
+  max-width: 95%;
 }
 
 .activity-text {
   width: 65%;
   float: right;
+  margin-top: 10px;
 }
 
 .activity-name {
   font-weight: 700;
   color: #013066;
   font-family: "Poppins", sans-serif;
+}
+
+.activity-date {
+  color: #013066;
+  font-weight: 600;
+}
+
+.activity-from {
+  color: #013066;
+  font-size: 110%;
+}
+
+.activity-to {
+  color: #5a5a5a;
+  font-size: 90%;
+}
+
+.activity-length {
+  color: #797979;
+}
+
+.activity-label {
+  font-size: 80%;
+  color: #797979;
+}
+
+.activity-place {
+  font-size: 110%;
+  color: #013066;
+}
+
+.people-in-front-of-you {
+  font-size: 80%;
+  color: #ffc107;
+}
+
+.annulla-button {
+  color: #013066;
+  font-weight: 700;
 }
