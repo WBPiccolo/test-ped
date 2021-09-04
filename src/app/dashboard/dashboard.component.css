@@ -59,3 +59,58 @@
 .padding-div {
   margin-top: 17%;
 }
+
+.dashboard-container-avvisi {
+  width: 50%;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+.dashboard-scarica-app {
+  height: 120px;
+  width: 50%;
+  margin-left: 400px;
+  margin-right: 400px;
+  background-color: #d4df5d;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: right;
+  background-repeat: no-repeat;
+}
+
+.scarica-app-content {
+  margin-left: 40px;
+  margin-top: 20px;
+  color: #d4df5d;
+}
+
+.app-mock {
+  width: 30%;
+}
+
+.app-store-button {
+  max-width: 25%;
+}
+
+.image-app {
+  max-width: 45%;
+}
+
+.dashboard-new-carousel {
+  width: 50%;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+.articleCard {
+  width: 20%;
+  height: 20%;
+  margin-left: 10px;
+}
+
+.btn-chevron {
+  width: 40%;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  padding-top: -5%;
+}

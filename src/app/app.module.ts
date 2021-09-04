@@ -17,6 +17,8 @@ import {
   faBell as faBell,
   faUser as faUser,
   faChevronRight as faChevronRight,
+  faArrowRight as faArrowRight,
+  faArrowLeft as faArrowLeft,
 } from '@fortawesome/free-solid-svg-icons';
 import { ActivityContainerComponent } from './activity-container/activity-container.component';
 
@@ -39,7 +41,9 @@ export class AppModule {
       faBell,
       faUser,
       faClock,
-      faChevronRight
+      faChevronRight,
+      faArrowRight,
+      faArrowLeft
     );
   }
 }
