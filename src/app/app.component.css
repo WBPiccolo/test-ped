@@ -1,3 +1,12 @@
 .navbar-margin {
-    padding-right: 10rem;
+  padding-right: 10rem;
+}
+
+.social {
+  width: 10%;
+}
+
+.dropdown-language {
+  border: none;
+  background: none;
 }

@@ -62,28 +62,28 @@ export class DashboardComponent implements OnInit {
   magazine: Article[] = [
     {
       title: 'Gli eventi di dicembre e gennaio',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
       link: '',
       date: new Date(),
       thumbnail: '../../assets/ski.jpg',
     },
     {
       title: 'Gli eventi di dicembre e gennaio',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
       link: '',
       date: new Date(),
       thumbnail: '../../assets/ski.jpg',
     },
     {
       title: 'Gli eventi di dicembre e gennaio',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
       link: '',
       date: new Date(),
       thumbnail: '../../assets/ski.jpg',
     },
     {
       title: 'Gli eventi di dicembre e gennaio',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
       link: '',
       date: new Date(),
       thumbnail: '../../assets/ski.jpg',

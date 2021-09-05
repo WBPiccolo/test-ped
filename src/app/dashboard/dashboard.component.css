@@ -97,9 +97,8 @@
 }
 
 .dashboard-new-carousel {
-  width: 50%;
-  margin-left: 400px;
-  margin-right: 400px;
+  width: 70%;
+  margin-left: 5%;
 }
 
 .articleCard {
@@ -112,5 +111,25 @@
   width: 40%;
   -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  padding-top: -5%;
+  margin-top: -5%;
+}
+
+.card-title,
+.mostra-tutti {
+  color: #ffc107;
+}
+
+.articleCard {
+  font-size: small;
+  float: right;
+  width: 20%;
+}
+
+.article-date {
+  font-size: smaller;
+  color: #797979;
+}
+
+.magazine-header {
+  margin-left: 15%;
 }
