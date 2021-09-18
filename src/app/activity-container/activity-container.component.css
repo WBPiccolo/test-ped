@@ -1,8 +1,11 @@
-.activity-container {
-  width: 550px;
-  height: 160px;
+/*.activity-container {
+  width: 120%;
   margin-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+}*/
+
+.activity-container {
+  width: 120%;
 }
 
 .activity-image {
@@ -64,4 +67,5 @@
 .annulla-button {
   color: #013066;
   font-weight: 700;
+  width: 70%;
 }

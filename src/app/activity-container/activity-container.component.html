@@ -1,56 +1,62 @@
-<div class="activity-container card flex-row flex-wrap">
-  <div class="activity-image">
-    <img src="{{ lesson.img }}" />
-  </div>
-  <div class="activity-text px-4 container">
-    <div class="activity-name p-1">
-      {{ lesson.name }}
-      <fa-icon
-        class="float-right px-2"
-        [icon]="['fas', 'chevron-right']"
-      ></fa-icon>
-    </div>
-    <div class="activity-date pt-2">
-      {{ getFormattedDate(lesson.time) }}
-    </div>
-    <div class="activity-hour">
-      <span class="activity-from">
-        {{ getStartTime(lesson.time) }}
-      </span>
-      <span class="activity-to px-2">
-        {{ getEndTime(lesson.time, lesson.length) }}
-      </span>
-      <span class="activity-length float-right mx-4">
-        <fa-icon [icon]="['far', 'clock']"></fa-icon>
-        {{ lesson.length }} min
-      </span>
-    </div>
-    <ng-container *ngIf="lesson.status === 'N'; else lezionePendingBlock">
-      <div class="activity-label row mt-1">
-        <span class="club-label col"> Club </span>
-        <span class="place-label col"> Sala </span>
+<div class="container activity-container mb-2">
+  <div class="card">
+    <div class="row">
+      <div class="col-4">
+        <img src="{{ lesson.img }}" class="img-fluid" />
       </div>
-      <div class="activity-place row">
-        <span class="club-name col">
-          {{ lesson.clubName }}
-        </span>
-        <span class="place-name col">
-          {{ lesson.salaName }}
-        </span>
+      <div class="col-8">
+        <div class="activity-name p-1">
+          {{ lesson.name }}
+          <fa-icon
+            class="float-right px-2"
+            [icon]="['fas', 'chevron-right']"
+          ></fa-icon>
+        </div>
+        <div class="activity-date pt-2">
+          {{ getFormattedDate(lesson.time) }}
+        </div>
+        <div class="activity-hour">
+          <span class="activity-from">
+            {{ getStartTime(lesson.time) }}
+          </span>
+          <span class="activity-to px-2">
+            {{ getEndTime(lesson.time, lesson.length) }}
+          </span>
+          <span class="activity-length float-right mx-4">
+            <fa-icon [icon]="['far', 'clock']"></fa-icon>
+            {{ lesson.length }} min
+          </span>
+        </div>
+        <ng-container *ngIf="lesson.status === 'N'; else lezionePendingBlock">
+          <div class="activity-label row mt-1">
+            <span class="club-label col"> Club </span>
+            <span class="place-label col"> Sala </span>
+          </div>
+          <div class="activity-place row">
+            <span class="club-name col">
+              {{ lesson.clubName }}
+            </span>
+            <span class="place-name col">
+              {{ lesson.salaName }}
+            </span>
+          </div>
+        </ng-container>
+        <ng-template #lezionePendingBlock>
+          <div class="row mt-1">
+            <div class="people-in-front-of-you mt-2 col">
+              {{ lesson.peopleInQueue }} persone prima di te
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-outline-warning annulla-button"
+              >
+                ANNULLA
+              </button>
+            </div>
+          </div>
+        </ng-template>
       </div>
-    </ng-container>
-    <ng-template #lezionePendingBlock>
-      <div class="row mt-1">
-        <span class="people-in-front-of-you mt-2 col">
-          {{ lesson.peopleInQueue }} persone prima di te
-        </span>
-        <button
-          type="button"
-          class="btn btn-outline-warning col annulla-button"
-        >
-          ANNULLA
-        </button>
-      </div>
-    </ng-template>
+    </div>
   </div>
 </div>

@@ -1,8 +1,17 @@
 .dashboard-activity {
   height: 200px;
-  background-color: #d4df5d;
+  background-color: #013066;
+  background-image: -webkit-linear-gradient(30deg, #013066 50%, #d4df5d 50%);
   position: relative;
 }
+
+/*
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  justify-content: center;
+}*/
 
 .dashboard-blue-diagonal-div {
   height: 100%;
@@ -45,7 +54,7 @@
   margin-right: 15%;
   width: 70%;
   position: absolute;
-  margin-top: 6%;
+  margin-top: 4%;
 }
 
 .prossime-attivita {
@@ -58,6 +67,11 @@
 
 .padding-div {
   margin-top: 17%;
+}
+@media only screen and (max-width: 800px) {
+  .padding-div {
+    margin-top: 30%;
+  }
 }
 
 .dashboard-container-avvisi {
@@ -132,4 +146,16 @@
 
 .magazine-header {
   margin-left: 15%;
+}
+
+.prossime-attivita > p {
+  color: #d4df5d;
+  margin-left: 20px;
+  font-size: large;
+}
+
+.pending-attivita > p {
+  color: #013066;
+  margin-left: 20px;
+  font-size: large;
 }

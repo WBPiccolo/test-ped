@@ -1,15 +1,19 @@
 <div class="dashboard-activity">
-  <div class="dashboard-blue-diagonal-div"></div>
-  <div class="dashboard-green-diagonal-div"></div>
-
-  <div class="attivita-container">
+  <div class="attivita-container container">
     <div class="prossime-attivita">
+      <p class="mb-4 px-3">
+        <fa-icon [icon]="['far', 'calendar']"></fa-icon> LE TUE PROSSIME
+        ATTIVITÀ
+      </p>
       <ng-container *ngFor="let act of nextLessons">
         <activity-container [lesson]="act"></activity-container>
       </ng-container>
     </div>
 
     <div class="pending-attivita">
+      <p class="mb-4">
+        HAI {{ pendingLessons.length }} ATTIVITÀ IN LISTA D'ATTESA
+      </p>
       <ng-container *ngFor="let act of pendingLessons">
         <activity-container [lesson]="act"></activity-container>
       </ng-container>
@@ -18,6 +22,7 @@
 </div>
 
 <div class="padding-div"></div>
+<div style="clear: both"></div>
 
 <div class="dashboard-allenati-con-noi">
   <div class="dashboard-blue-diagonal-div">
@@ -30,6 +35,7 @@
     </div>
   </div>
 </div>
+<div style="clear: both"></div>
 
 <div class="dashboard-container-avvisi mt-5">
   <div class="avvisi-header row mb-5">
@@ -53,6 +59,7 @@
     </ngb-accordion>
   </div>
 </div>
+<div style="clear: both"></div>
 
 <div class="dashboard-scarica-app mt-5">
   <div class="dashboard-blue-diagonal-div">
@@ -68,6 +75,7 @@
     <img class="image-app" src="../../assets/app.png" />
   </div>
 </div>
+<div style="clear: both"></div>
 
 <div class="dashboard-new-carousel mt-5">
   <div class="magazine-header row mb-5">
