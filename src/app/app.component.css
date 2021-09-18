@@ -10,3 +10,7 @@
   border: none;
   background: none;
 }
+
+.site-container {
+  padding-top: 1rem;
+}

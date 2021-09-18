@@ -1,46 +1,54 @@
-<nav class="navbar navbar-expand-md">
-  <div
-    class="navbar-margin navbar-collapse collapse w-100 order-3 dual-collapse2"
-  >
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item px-2">
-        <fa-icon [icon]="['fas', 'home']"></fa-icon>
-      </li>
-      <li class="nav-item px-2">
-        <fa-icon [icon]="['far', 'calendar']"></fa-icon>
-      </li>
-      <li class="nav-item px-2">
-        <fa-icon [icon]="['fas', 'bell']"></fa-icon>
-      </li>
-      <li class="nav-item px-2">
-        <fa-icon [icon]="['fas', 'user']"></fa-icon>
-      </li>
-    </ul>
-  </div>
-</nav>
-<router-outlet></router-outlet>
-
-<footer class="footer mt-5">
-  <div class="float-right mx-5 mb-5 row">
-    <img class="social mx-1" src="../../assets/instagram.png" />
-    <img class="social mx-1" src="../../assets/facebook.png" />
-    <img class="social mx-1" src="../../assets/youtube.png" />
-    <img class="flagIta social ml-2" src="../../assets/italy.png" />
-    <div class="btn-group dropup">
-      <button
-        type="button"
-        class="btn btn-primary dropdown-toggle dropdown-language"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-      >
-        ITA
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">ITA</a>
-        <a class="dropdown-item" href="#">ENG</a>
-      </div>
+<div class="site-container">
+  <nav class="navbar navbar-expand-md">
+    <div
+      class="
+        navbar-margin navbar-collapse
+        collapse
+        w-100
+        order-3
+        dual-collapse2
+      "
+    >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item px-2">
+          <fa-icon [icon]="['fas', 'home']"></fa-icon>
+        </li>
+        <li class="nav-item px-2">
+          <fa-icon [icon]="['far', 'calendar']"></fa-icon>
+        </li>
+        <li class="nav-item px-2">
+          <fa-icon [icon]="['fas', 'bell']"></fa-icon>
+        </li>
+        <li class="nav-item px-2">
+          <fa-icon [icon]="['fas', 'user']"></fa-icon>
+        </li>
+      </ul>
     </div>
-    <p class="madebyPED">Made by <b>PED</b></p>
-  </div>
-</footer>
+  </nav>
+  <router-outlet></router-outlet>
+
+  <footer class="footer mt-5">
+    <div class="float-right mx-5 mb-5 row">
+      <img class="social mx-1" src="../../assets/instagram.png" />
+      <img class="social mx-1" src="../../assets/facebook.png" />
+      <img class="social mx-1" src="../../assets/youtube.png" />
+      <img class="flagIta social ml-2" src="../../assets/italy.png" />
+      <div class="btn-group dropup">
+        <button
+          type="button"
+          class="btn btn-primary dropdown-toggle dropdown-language"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          ITA
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">ITA</a>
+          <a class="dropdown-item" href="#">ENG</a>
+        </div>
+      </div>
+      <p class="madebyPED">Made by <b>PED</b></p>
+    </div>
+  </footer>
+</div>

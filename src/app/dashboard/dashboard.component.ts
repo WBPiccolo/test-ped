@@ -5,8 +5,8 @@ import { Article } from '../common/Article';
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'],
+  templateUrl: './new-dashboard.component.html',
+  styleUrls: ['./new-dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
   lezioni: Lesson[] = [
