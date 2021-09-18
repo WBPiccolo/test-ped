@@ -138,3 +138,23 @@
   font-size: smaller;
   color: #797979;
 }
+
+@media only screen and (max-width: 800px) {
+  .dashboard-allenati-con-noi,
+  .dashboard-scarica-app {
+    display: none;
+  }
+  .dashboard-activity {
+    background-color: #013066;
+    background-image: none;
+  }
+  .flex-item {
+    flex: 1 0 90%;
+    margin: 5px;
+  }
+
+  .prossime-attivita > p,
+  .pending-attivita > p {
+    text-align: center;
+  }
+}

@@ -13,9 +13,7 @@ export class ActivityContainerComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.lesson);
-  }
+  ngOnInit(): void {}
 
   getFormattedDate(date: Date): string {
     const today = moment();

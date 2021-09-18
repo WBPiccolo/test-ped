@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Lesson } from '../common/Lesson';
 import { Avviso } from '../common/Avviso';
 import { Article } from '../common/Article';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -90,22 +91,35 @@ export class DashboardComponent implements OnInit {
     },
   ];
 
-  formattedArticles = [];
+  formattedArticles: Article[] = [];
   nextLessons: Lesson[] = [];
   pendingLessons: Lesson[] = [];
+  screenWidth: number = 0;
+  screenHeight: number = 0;
 
   constructor() {}
 
   ngOnInit(): void {
     this.setIcona('home');
+
+    this.onResize();
+  }
+
+  setIcona(page: string) {}
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.screenHeight = window.innerHeight;
+    this.screenWidth = window.innerWidth;
     this.nextLessons = this.lezioni.filter((lezione) => lezione.status === 'N');
     this.pendingLessons = this.lezioni.filter(
       (lezione) => lezione.status === 'P'
     );
-    //4 articoli per pagina
-    const magazinePages = Math.ceil(this.magazine.length / 4);
-    for (let i = 0; i < magazinePages; i++) {}
+    this.formattedArticles = this.magazine;
+    if (this.screenWidth <= 800) {
+      this.nextLessons = [this.nextLessons[0]];
+      this.pendingLessons = [this.pendingLessons[0]];
+      this.formattedArticles = [this.formattedArticles[0]];
+    }
   }
-
-  setIcona(page: string) {}
 }

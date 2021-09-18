@@ -85,7 +85,7 @@
         </div>
       </div>
       <div class="dashboard-carousel row">
-        <ng-container *ngFor="let articoli of magazine">
+        <ng-container *ngFor="let articoli of formattedArticles">
           <div class="card articleCard mx-2 col">
             <img
               class="card-img-top img-fluid"
@@ -109,31 +109,3 @@
     </div>
   </div>
 </div>
-
-<!--<div class="dashboard-new-carousel mt-5">
-  <div class="magazine-header row mb-5">
-    <div class="icona-avvisi col">
-      <fa-icon [icon]="['fas', 'circle']"></fa-icon> MAGAZINE
-    </div>
-    <div class="col">
-      <div class="mostra-tutti float-right">Mostra tutti</div>
-    </div>
-  </div>
-  <ng-container *ngFor="let articoli of magazine">
-    <div class="card articleCard mx-2">
-      <img class="card-img-top" src="{{ articoli.thumbnail }}" />
-      <a href="#" class="btn btn-primary btn-chevron">
-        <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon
-      ></a>
-      <div class="card-body">
-        <h5 class="card-title">{{ articoli.title.toUpperCase() }}</h5>
-        <p class="card-text">
-          {{ articoli.text }}
-        </p>
-        <p class="card-text article-date">
-          {{ articoli.date | date: "dd/MM/yyyy" }}
-        </p>
-      </div>
-    </div>
-  </ng-container>
-</div>-->
